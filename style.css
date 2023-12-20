@@ -20,20 +20,63 @@ body {
 }
 
 main {
-    width: min(80%, 800px);
+    width: min(80%, 900px);
     margin: 50px auto;
 }
 
 .card {
     padding: 20px;
+    border-radius: 8px;
+    margin: 10px 10px;
+}
+
+.card .user-profile {
+    display: flex;
+}
+
+.card .user-profile img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.card .user-detail span {
+    display: block;
+}
+
+.card .user-detail .name {
+    font-size: .9rem;
+}
+
+.card .user-detail .status {
+    font-size: .7rem;
+    opacity: 50%;
+}
+
+.card .user-comment p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card .user-quotes p {
+    font-size: .8rem;
+    opacity: 70%;
+    font-weight: 400;
 }
 
 .card-1 {
+    background: url("images/bg-pattern-quotation.svg") no-repeat 90% top;
+    background-size: 40%;
     background-color: var(--violet);
+    color: white;
 }
 
 .card-2 {
     background-color: var(--dark-grey);
+    color: white;
 }
 
 .card-3 {
@@ -42,6 +85,7 @@ main {
 
 .card-4 {
     background-color: var(--dark-black);
+    color: white;
 }
 
 .card-5 {
@@ -56,8 +100,8 @@ main {
     main {
         display: grid;
         grid-template-areas: 
-        "one one two three"
-        "four five five three"
+        "one one one one two two three three"
+        "four four five five five five three three"
         ;
     }
 
