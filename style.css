@@ -9,11 +9,13 @@
     --violet: hsl(263, 55%, 52%);
     --dark-grey: hsl(217, 19%, 35%);
     --dark-black: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
     --bg-body: hsl(0, 0%, 81%);
     --text-color: hsl(210, 46%, 95%);
 }
 
 body {
+    background-color: var(--bg-body);
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -23,9 +25,59 @@ main {
 }
 
 .card {
-    padding: 10px;
+    padding: 20px;
+}
+
+.card-1 {
+    background-color: var(--violet);
+}
+
+.card-2 {
+    background-color: var(--dark-grey);
+}
+
+.card-3 {
+    background-color: var(--white);
+}
+
+.card-4 {
+    background-color: var(--dark-black);
+}
+
+.card-5 {
+    background-color: var(--white);
 }
 
 .attribution {
     display: none;
+}
+
+@media screen and (min-width: 720px) {
+    main {
+        display: grid;
+        grid-template-areas: 
+        "one one two three"
+        "four five five three"
+        ;
+    }
+
+    .card-1 {
+        grid-area: one;
+    }
+
+    .card-2 {
+        grid-area: two;
+    }
+
+    .card-3 {
+        grid-area: four;
+    }
+
+    .card-4 {
+        grid-area: five;
+    }
+
+    .card-5 {
+        grid-area: three;
+    }
 }
