@@ -17,6 +17,7 @@
 body {
     background-color: var(--bg-body);
     font-family: 'Barlow Semi Condensed', sans-serif;
+    position: relative;
 }
 
 main {
@@ -25,7 +26,7 @@ main {
 }
 
 .card {
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     margin: 10px 10px;
 }
@@ -99,6 +100,7 @@ main {
 @media screen and (min-width: 720px) {
     main {
         display: grid;
+        grid-template-columns: repeat(8, 125px);
         grid-template-areas: 
         "one one one one two two three three"
         "four four five five five five three three"
